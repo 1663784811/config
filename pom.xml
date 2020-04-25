@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!--============-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.6.RELEASE</version>
+        <relativePath/>
+    </parent>
+    <!--============-->
+    <groupId>cn.cyyaw</groupId>
+    <artifactId>dependencies</artifactId>
+    <version>2.0</version>
+    <packaging>pom</packaging>
+    <name>dependencies</name>
+    <url>http://cyyaw.cn</url>
+    <!--============-->
+    <properties>
+        <cyyaw.common>2.0</cyyaw.common>
+        <alibaba.fastjson>1.2.47</alibaba.fastjson>
+        <java.version>1.8</java.version>
+        <spring-cloud.version>Hoxton.SR3</spring-cloud.version>
+    </properties>
+
+
+    <!--============-->
+    <dependencyManagement>
+        <dependencies>
+            <!--==============   项目    ==============-->
+            <dependency>
+                <groupId>cn.cyyaw</groupId>
+                <artifactId>common</artifactId>
+                <version>${cyyaw.common}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.cyyaw</groupId>
+                <artifactId>jpa</artifactId>
+                <version>${cyyaw.common}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.cyyaw</groupId>
+                <artifactId>service</artifactId>
+                <version>${cyyaw.common}</version>
+            </dependency>
+
+
+            <!-- =========    controller层     =======  -->
+            <dependency>
+                <groupId>cn.cyyaw</groupId>
+                <artifactId>table</artifactId>
+                <version>${cyyaw.common}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.cyyaw</groupId>
+                <artifactId>shiro</artifactId>
+                <version>${cyyaw.common}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.cyyaw</groupId>
+                <artifactId>weixin</artifactId>
+                <version>${cyyaw.common}</version>
+            </dependency>
+
+
+
+            <!--==============   项目    ==============-->
+
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${alibaba.fastjson}</version>
+            </dependency>
+
+            <!--================           二维码生成器         ================-->
+            <dependency>
+                <groupId>com.google.zxing</groupId>
+                <artifactId>core</artifactId>
+                <version>3.3.3</version>
+            </dependency>
+
+            <!--============          微信         ============-->
+            <dependency>
+                <groupId>com.github.binarywang</groupId>
+                <artifactId>weixin-java-common</artifactId>
+                <version>3.5.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.binarywang</groupId>
+                <artifactId>weixin-java-mp</artifactId>
+                <version>3.5.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.binarywang</groupId>
+                <artifactId>weixin-java-pay</artifactId>
+                <version>3.5.0</version>
+            </dependency>
+
+            <!--==============     权限框架  =================== -->
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-spring</artifactId>
+                <version>1.4.0</version>
+            </dependency>
+
+            <!--=====================           FTP          ==============-->
+            <dependency>
+                <groupId>commons-net</groupId>
+                <artifactId>commons-net</artifactId>
+                <version>3.6</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+
+
+
+
+    <build>
+        <!-- 资源文件配置 -->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+    </build>
+</project>
