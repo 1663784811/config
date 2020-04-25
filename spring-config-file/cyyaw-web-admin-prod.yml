@@ -1,6 +1,6 @@
 spring:
   application:
-    name: itoken-web-admin
+    name: web-admin
 
 server:
   port: 8601
