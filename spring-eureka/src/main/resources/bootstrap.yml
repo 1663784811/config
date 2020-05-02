@@ -2,6 +2,6 @@ spring:
   cloud:
     config:
       uri: http://localhost:8888
-      name: spring-eureka,spring-boot-admin-client
+      name: cyyaw-web-common,spring-eureka,spring-boot-admin-client
       label: master
       profile: dev
