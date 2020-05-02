@@ -1,7 +1,8 @@
 spring:
   application:
     name: spring-zipkin
-
+    main:
+      allow-bean-definition-overriding: true
 server:
   port: 9411
 
@@ -10,3 +11,5 @@ management:
     web:
       server:
         auto-time-requests: false
+
+
