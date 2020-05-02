@@ -1,8 +1,6 @@
 package cn.cyyaw.jpa;
 
 import cn.cyyaw.common.entity.SelectModel;
-import cn.cyyaw.common.util.JpaUtils;
-import cn.cyyaw.common.util.WhySpecification;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
