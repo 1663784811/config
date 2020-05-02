@@ -2,6 +2,6 @@ spring:
   cloud:
     config:
       uri: http://192.168.75.128:8888
-      name: cyyaw-web-common,spring-boot-admin,spring-client-zipkin
+      name: cyyaw-web-common,spring-boot-admin,spring-eureka-client
       label: master
       profile: prod
