@@ -5,24 +5,24 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
+@EnableEurekaClient
 @Configuration
-@EnableScheduling
 @SpringBootApplication
-public class ServiceAdmin extends SpringBootServletInitializer {
+public class ServiceAdminApplication extends SpringBootServletInitializer {
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(ServiceAdmin.class);
+        return application.sources(ServiceAdminApplication.class);
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(ServiceAdmin.class, args);
+        SpringApplication.run(ServiceAdminApplication.class, args);
     }
 
 
