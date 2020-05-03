@@ -2,6 +2,6 @@ spring:
   cloud:
     config:
       uri: http://192.168.75.128:8888
-      name: cyyaw-web-common,spring-boot-admin-client,spring-eureka-client,spring-zuul,cyyaw-web-admin
+      name: cyyaw-web-common,spring-boot-admin-client,spring-eureka-client,cyyaw-web-admin
       label: master
       profile: prod

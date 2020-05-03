@@ -1,10 +1,13 @@
 package cn.cyyaw.admin.table.service;
 
 
-import cn.cyyaw.admin.table.service.fallback.AdminServiceFallback;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-@FeignClient(value = "cyyaw-service-admin", fallback = AdminServiceFallback.class)
+@FeignClient(value = "cyyaw-service-admin")
 public interface AdminService {
 
+    @RequestMapping(value = "/admin/table/findAllTAdmin", method = RequestMethod.GET)
+    String findAllTAdmin();
 }
