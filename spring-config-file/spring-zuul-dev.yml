@@ -8,8 +8,8 @@ server:
 zuul:
   routes:
     backend-admin:
-      path: /backend/admin/**
-      serviceId: itoken-web-admin
+      path: /admin/**
+      serviceId: cyyaw-web-admin
     backend-posts:
       path: /backend/posts/**
       serviceId: itoken-web-posts
