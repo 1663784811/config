@@ -1,6 +1,6 @@
 spring:
   application:
-    name: web-admin
+    name: cyyaw-web-admin
 
 server:
   port: 8601
