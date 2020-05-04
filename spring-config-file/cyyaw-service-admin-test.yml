@@ -1,0 +1,18 @@
+server:
+  port: 8501
+
+spring:
+  application:
+    name: cyyaw-service-admin
+  jpa: #数据库配置
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: false
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/cyyaw?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: because
+    driver-class-name: com.mysql.cj.jdbc.Driver
