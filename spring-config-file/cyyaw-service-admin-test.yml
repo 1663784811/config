@@ -12,7 +12,12 @@ spring:
     open-in-view: false
 
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/cyyaw?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    url: jdbc:h2:mem:test
     username: root
-    password: because
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    password:
+    driver-class-name: org.h2.Driver
+    schema: classpath:db/schema.sql
+    data: classpath:db/data.sql
+  h2:
+    console:
+      enabled: true
