@@ -12,9 +12,9 @@ spring:
     open-in-view: false
 
   datasource:
-    url: jdbc:h2:mem:test
+    url: jdbc:h2:mem:test_db
     username: root
-    password:
+    password: 123456
     driver-class-name: org.h2.Driver
     schema: classpath:db/schema.sql
     data: classpath:db/data.sql
