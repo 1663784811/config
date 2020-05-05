@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: cyyaw-web-sso
+
+server:
+  port: 8503
